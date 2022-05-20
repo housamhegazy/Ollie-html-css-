@@ -163,7 +163,7 @@ header .nav .list li:last-child a{
 /* end header */
 /*start landing */
 .landing{
-    height:calc(100vh - 70px);
+    height:100vh;
     padding-top:100px;
     padding-bottom: 20px;
     background-image: url("../images/header.jpg");
@@ -575,6 +575,169 @@ header .nav .list li:last-child a{
 }
 
 /* end blog*/
+/*start video*/
+.video{
+    position: relative;
+    background-color: var(--back-color);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.video .content{
+    display: flex;
+    justify-content: space-between;
+    gap:30px;
+}
+@media(max-width:991px){
+    .video .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.video .content .info{
+    flex-basis:45%;
+}
+.video .content .info > span{
+    color:#e6f5f7
+}
+.video .content .info h2{
+    color:white;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding:10px 0;
+}
+.video .content .info h2 > span{
+    color:var(--main-color);
+    display: block;
+    padding-top:10px
+}
+.video .content .info p{
+    color:white;
+    line-height: 1.6;
+    padding:10px 0;
+}
+.video .content .info a{
+    color:white;
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding:10px;
+    font-size:20px;
+    display: block;
+    float:left;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.video .content .watch  {
+    flex:1
+}
+.video .content .watch iframe{
+    min-width:100%;
+    min-height: 80%;
+}
+.video .content .watch .play{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--back2-color);
+    padding: 10px;
+}
+.video .content .watch .play p{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:var(--main-color);
+}
+.video .content .watch .play i{
+    color:var(--main-color);
+    padding-right: 20px;
+}
+/*end video*/
+/* start discover */
+.discover{
+    position: relative;
+    padding-top: var(--main-padding);
+    background-color:#777
+}
+.discover .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:50px;
+}
+.discover .info{
+    text-align: center;
+    text-transform: uppercase;
+    color:white
+}
+.discover .info h4{
+    font-size:25px;
+}
+.discover .info h1{
+    font-size:70px;
+    color: var(--main-color);
+}
+@media(max-width:767px){
+    .discover .info h1{
+        font-size:50px;
+    }
+}
+.discover .info button{
+    background-color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding:10px;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.discover .choose{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+@media(max-width:991px){
+    .discover .choose{
+        flex-direction: column;
+        gap:20px
+    }
+}
+.discover .choose .box{
+    flex-basis: 25%;
+    background-color: #2C3E50;
+    padding:10px;
+}
+.discover .choose .box h2{
+    color:var(--main-color);
+    font-size: 25px;
+    font-weight: normal;
+    color:var(--main-color);
+    text-align: center;
+    padding:20px 0;
+}
+.discover .choose .box p{
+    color:white;
+}
+.discover .choose .box a{
+    color:white;
+    background-color: var(--main-color);
+    padding:5px;
+    float: left;
+    margin-top:10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* end discover */
 /* start contact us */
 .contact-us{
     position: relative;
@@ -620,6 +783,12 @@ header .nav .list li:last-child a{
     flex-basis:calc(50% - 10px);
     height:40px
 }
+@media(max-width:767px){
+    .contact-us .content form .name,
+.contact-us .content form .email{
+    flex-basis:100%;
+}
+}
 .contact-us .content form .textarea{
     flex-basis: calc(100% - 10px);
     resize: none;
@@ -655,6 +824,7 @@ header .nav .list li:last-child a{
     padding:10px
 }
 /* end contact us */
+
 /* start footer */
 footer{
     background-color: var(--back2-color);
